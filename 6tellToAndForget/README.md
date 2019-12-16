@@ -1,5 +1,7 @@
 **tell** to is also called **transmit** or **forward**
 
+you can code it yourself with a "transmitter" actor or you can use the forward pattern already existing in AKKA that uses a "mediator" actor
+
 https://doc.akka.io/docs/akka/current/actors.html#forward-message 
 
 ![](img.png)
