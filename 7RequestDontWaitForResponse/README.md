@@ -1,6 +1,8 @@
 You can try sending more message from a to b (maybe 30 messages ?) to test this pattern.
 As always, be sure that the main function is only sending one message to a, so there is one and only one "tell" call from the main function. The other tell calls are from the actors. 
 
+Remember that the sender can also use the getSelf() method to get its own reference, the receiver can use the getSender() to get the sender reference.
+
 ![](img.png)
 
 ```

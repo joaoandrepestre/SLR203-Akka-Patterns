@@ -8,6 +8,7 @@ Double check that the main function is calling "tell" a maximum of 2 times. If t
 Also be aware that who is "really" sending the message and what is in the "sender" header of the message can be different.
 For exemple, when the main is sending a message, it is sent by nobody and there is no sender in the header.
 Then receiver can use the getSender() method to get the "sender" header that was put in the message (but not the real sender that really sent the message).
+The sender can also use the getSelf() method to get its own reference.
 
 https://doc.akka.io/docs/akka/current/actors.html#forward-message 
 

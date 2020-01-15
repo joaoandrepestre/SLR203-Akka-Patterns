@@ -2,6 +2,8 @@ request response is also called ASK pattern in Akka
 
 this ask is waiting a future using the Await.result method.
 
+This is a bad habbit because actors shouldn't block. Waiting in an actor is bad, so using Await is bad (and the ASK pattern is usually bad).
+
 https://doc.akka.io/docs/akka/current/futures.html
 
 more documentation: https://doc.akka.io/docs/akka/current/actors.html#ask-send-and-receive-future 
