@@ -20,18 +20,21 @@ getContext().system().scheduler().scheduleOnce(Duration.ofMillis(1000), a, "foo"
 ```
 title broadcast round robin
 
+materialdesignicons F150 scheduler
 participant a
 participant broadcaster
 participant b
 participant c
 
+a-->scheduler:scheduleOnce:1000:a:"go"...
 b->broadcaster:join
 c->broadcaster:join
-note right of a:here a has to wait 1 sec (we hope so!) 
+space 6
+scheduler->a:"go"
 a->broadcaster:m
 broadcaster->b:m
 broadcaster->c:m
 
 ```
 
-https://sequencediagram.org/index.html#initialData=C4S2BsFMAICMCcD2BDAJgY2QZ2NJBXAO1T0VhEIChKAHZeUdEOw3ZW+x55VuJNTDkjwODEExa5YorpOjpqsALQA+BCgzZgwgFwArRBUrpV6gVt0GjhRNrwgA5gAtciAGbRkOp8JjJoTtjQwIjQAO7IYNAAjNBYkOjQABRhME6INDBYiACEAJTQlMim-JpC8DoAtpRmZdrwplU1pYL1quhNQA
+https://sequencediagram.org/index.html#initialData=C4S2BsFMAICMCcD2BDAJgY2QZ2NJBXAO1T0VhEIChKBbZYSeEZcVSLEAc0JHUUKzQAYgEYArAAZoWdAAtIqfFHiUADsnih0IdYVzI1GrTuR64SNJhyNDm3ibOxbx3bnTVkAWk8A+GfMVlAC5-BSVIAHlCdEggkQkEoOQggCJORBSAOmzKWF8EFAxsBngggCtECkp0fIsi61KKqqx1GOgANkpQwMZfZLSMyi8fAstixiCaXLqrEvzJ6cLZ3p90BaA
