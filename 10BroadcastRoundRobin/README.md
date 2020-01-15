@@ -12,7 +12,7 @@ Indeed, remember that Thread.sleep(1000) is a really bad bad bad habbit ! You sh
 Instead, "a" should ask a scheduler to send a message after 1 second. There is a simple scheduler (among more complex ones) in the akka system. On order for "a" to ask the system scheduler to send a message after one second, you should use this method:
 
 ```
-getContext().system().scheduler().scheduleOnce(Duration.ofMillis(1000), a, "foo", getContext().system(), getSelf());
+getContext().system().scheduler().scheduleOnce(Duration.ofMillis(1000), getSelf(), "go", getContext().system(), ActorRef.noSender());
 ```
 
 ![](img.png)
