@@ -1,3 +1,5 @@
+Same as before, use the scheduler to do the right timing for this pattern. Here the scheduler is not displayed for simplicity reasons.
+
 ![](img.png?raw=true)
 ```
 title mutlicast
